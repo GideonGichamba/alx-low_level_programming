@@ -2,7 +2,7 @@
 /**
  * main - Program Entry point
  * 
- *desription: a programme that prints alphabet in lower case
+ * desription: a programme that prints alphabet in lower case
  *
  * Return: Always 0 (Success)
 */
