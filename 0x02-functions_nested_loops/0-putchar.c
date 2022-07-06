@@ -1,10 +1,8 @@
 #include "main.h"
-
 /**
- * main - Prints "_putchar" followed by a new line.
- *
- * Return: Always 0.
- */
+ * main - main block
+ * Description: A program that prints putchar
+ * Return: 0 success*/
 int main(void)
 {
 	_putchar('_');
@@ -17,5 +15,5 @@ int main(void)
 	_putchar('r');
 	_putchar('\n');
 
-	return (0);
+		return (0);
 }
