@@ -2,7 +2,8 @@
 /**
  * main - main block
  * Description: A program that prints putchar
- * Return: 0 success*/
+ * Return: 0 success
+*/
 int main(void)
 {
 	_putchar('_');
