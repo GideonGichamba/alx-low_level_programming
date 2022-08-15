@@ -1,33 +1,32 @@
 #include "lists.h"
 
 /**
- * find_listint_loop - Finds where a loop starts in a linked list
- * @head: Address of the first node in the list
+ * add_nodeint_end - function with two arguments
+ * @head: double pointer to head of first linked list
+ * @n: integer value of data in node
  *
- * Return: Address of the first node in the loop
+ * Description: add a new node at the end of linked list
+ * Return: address of new element
  */
-listint_t *find_listint_loop(listint_t *head)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *t = head, *h = head;
+	listint_t *temp, *cursor;
 
-	if (!head)
+	temp = malloc(sizeof(listint_t));
+	if (temp == NULL)
 		return (NULL);
 
-	do {
-		if (h->next == NULL || h->next->next == NULL)
-			return (NULL);
+	temp->next = NULL;
+	temp->n = n;
 
-		h = h->next->next;
-		t = t->next;
-	} while (t != h);
-
-	t = head;
-
-	while (t != h)
+	if (*head)
 	{
-		t = t->next;
-		h = h->next;
+		cursor = *head;
+		while (cursor->next != NULL)
+			cursor = cursor->next;
+		cursor->next = temp;
 	}
-
-	return (t);
+	else
+		*head = temp;
+	return (temp);
 }
